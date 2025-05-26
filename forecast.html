@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast - DK WeatherPro</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h1>DK Weather<span>Pro</span></h1>
+            </div>
+            <div class="search-container">
+                <div class="search-box">
+                    <input type="text" id="location-input" placeholder="Search location...">
+                    <button id="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <div class="error-message" id="error-message"></div>
+            </div>
+            <nav class="sidebar-nav">
+                <button class="nav-item" onclick="window.location.href='index.html'">
+                    <i class="fas fa-home"></i>
+                    <span>Overview</span>
+                </button>
+                <button class="nav-item active">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Forecast</span>
+                </button>
+                <button class="nav-item" onclick="window.location.href='maps.html'">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Maps</span>
+                </button>
+                <button class="nav-item" onclick="window.location.href='history.html'">
+                    <i class="fas fa-history"></i>
+                    <span>History</span>
+                </button>
+            </nav>
+            <div class="theme-toggle">
+                <button id="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                    <span>Dark Mode</span>
+                </button>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <div class="current-weather" id="current-weather">
+                <!-- Current weather will be displayed here -->
+            </div>
+
+            <div class="forecast-details">
+                <div id="hourly-forecast" class="hourly-forecast">
+                    <!-- Hourly forecast will be displayed here -->
+                </div>
+
+                <div id="daily-forecast" class="daily-forecast">
+                    <!-- Daily forecast will be displayed here -->
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div class="loading-spinner" id="loading-spinner">
+        <div class="spinner"></div>
+    </div>
+
+    <footer class="app-footer">
+        <p>&copy; 2025 DK WeatherPro. All rights reserved.</p>
+    </footer>
+
+    <script src="js/forecast.js"></script>
+</body>
+
+</html>
